@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         El Poblenou - 📸 coming soon
       </div>
 
-      {/* <HomePage /> */}
+      <HomePage />
     </>
   );
 };

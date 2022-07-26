@@ -1,4 +1,14 @@
 @tailwind base;
+@import "windy-radix-palette/base";
+
+@import "windy-radix-palette/blackA.css";
+@import "windy-radix-palette/whiteA.css";
+
+@import "windy-radix-palette/tomato.css";
+@import "windy-radix-palette/tomatoDark.css";
+@import "windy-radix-palette/gray.css";
+@import "windy-radix-palette/grayDark.css";
+
 @tailwind components;
 @tailwind utilities;
 
