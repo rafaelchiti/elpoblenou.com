@@ -9,9 +9,7 @@ const Home: NextPage = () => {
       <Head>
         <title>El Poblenou</title>
       </Head>
-      <div className="m-auto w-96 p-8 text-center">
-        El Poblenou - 📸 coming soon
-      </div>
+      <div className="p-8 text-center">El Poblenou - 📸 coming soon</div>
 
       <HomePage />
     </>
