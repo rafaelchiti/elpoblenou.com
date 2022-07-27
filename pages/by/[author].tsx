@@ -18,7 +18,6 @@ const Home: NextPage = () => {
       stringAuthor?.replace(" ", "-").toLowerCase()
     );
   });
-  console.log(photos);
 
   if (!author || photos.length === 0) {
     return (

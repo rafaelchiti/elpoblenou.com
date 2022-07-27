@@ -1,5 +1,4 @@
-import { group } from "console";
-import { pick, groupBy, pickBy } from "lodash";
+import { groupBy, pickBy } from "lodash";
 
 export type PhotoType = {
   id: string;
