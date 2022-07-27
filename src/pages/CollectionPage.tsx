@@ -1,11 +1,19 @@
 import { format } from "date-fns";
 import NextImage from "next/image";
 import NextLink from "next/link";
-import { PHOTOS } from "src/constants/photos";
+import { PHOTOS, PhotoType } from "src/constants/photos";
 
-export const HomePage = () => {
+export const CollectionPage = ({
+  photos,
+  title,
+}: {
+  photos: PhotoType[];
+  title: string;
+}) => {
   return (
     <div className="m-auto mt-16">
+      <h1 className="text-center text-2xl font-bold">{title}</h1>
+      <div className="mt-10" />
       <div className="flex flex-wrap items-end">
         {PHOTOS.map((photo, index) => {
           return (
@@ -30,13 +38,9 @@ export const HomePage = () => {
               </NextLink>
 
               <div className="pt-2">
-                <NextLink
-                  href={`/by/${photo.author.replace(" ", "-").toLowerCase()}`}
-                >
-                  <a className="text-gray-10 text-sm hover:underline hover:cursor-pointer">
-                    {photo.author}
-                  </a>
-                </NextLink>
+                <span className="text-gray-10 text-sm hover:underline hover:cursor-pointer">
+                  {photo.author}
+                </span>
                 <span className="text-gray-10 text-sm px-3">{"·"}</span>
                 <span className="text-gray-10 text-sm">
                   {format(photo.date, "MMM dd, yyyy")}

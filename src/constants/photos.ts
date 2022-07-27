@@ -1,18 +1,18 @@
 import { group } from "console";
 import { pick, groupBy, pickBy } from "lodash";
 
-type Photos = {
+export type PhotoType = {
   id: string;
   url: string;
   aspectRatio: number;
   date: Date;
-  author?: string;
+  author: string;
   title?: string;
 };
 
 // https://shortunique.id/ (10 length)
 
-let RAFA_PHOTOS: Photos[] = [
+let RAFA_PHOTOS: PhotoType[] = [
   {
     url: "https://d31ycvomo5jvoe.cloudfront.net/rc/la-florence-paris/1.jpg",
     aspectRatio: 1.48315,
