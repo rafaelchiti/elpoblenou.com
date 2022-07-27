@@ -11,7 +11,10 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
   return (
     <div className="h-full p-8">
       <div className="h-full flex flex-col md:flex-row items-stretch ">
-        <aside className="order-2 md:order-1 w-96 flex flex-col ring-1">
+        <aside
+          className="order-2 md:order-1 md:w-96 flex 
+        flex-col ring-1"
+        >
           {photo?.author}
         </aside>
         <main className="order-1 md:order-2 ring-1 w-full">
