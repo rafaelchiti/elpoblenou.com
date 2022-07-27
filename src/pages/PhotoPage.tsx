@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { PHOTOS } from "src/constants/photos";
 
-export const PhotoPage = ({ photoId }: { photoId: string }) => {
+export const PhotoPage = ({ photoId }: { photoId?: string }) => {
   const photo = PHOTOS.find((photo) => photo.id === photoId);
   if (!photo) {
     return <div>Ops we couldn't find that photo, maybe the link is wrong?</div>;
@@ -14,10 +14,10 @@ export const PhotoPage = ({ photoId }: { photoId: string }) => {
         <aside className="order-2 md:order-1 w-96 flex flex-col ring-1">
           {photo?.author}
         </aside>
-        <main className="order-1 md:order-2 ring-1 flex flex-col w-full">
+        <main className="order-1 md:order-2 ring-1 w-full">
           <div
             style={{ aspectRatio: `${photo.aspectRatio}` }}
-            className="relative bg-gray-6"
+            className="relative bg-gray-6 ring-2 max-h-full"
           >
             <Image
               src={photo.url}

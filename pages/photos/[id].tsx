@@ -6,14 +6,14 @@ import { PhotoPage } from "src/pages/PhotoPage";
 
 const Home: NextPage = () => {
   const router = useRouter();
-  const { id } = router.query;
+  let { id } = router.query;
 
   return (
     <>
       <Head>
         <title>El Poblenou</title>
       </Head>
-      <PhotoPage photoId={id} />
+      <PhotoPage photoId={id ? id.toString() : undefined} />
     </>
   );
 };
