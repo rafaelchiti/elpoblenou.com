@@ -19,7 +19,7 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
           <button
             onClick={() => router.back()}
             type="button"
-            className="flex justify-center items-center p-2 w-8 h-8 rounded-md 
+            className="flex justify-center items-center p-1.5 w-7 h-7 rounded-md text-gray-10
               hover:text-white hover:bg-violet-5 hover:text-violet-10
               focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-violet-8"
           >
