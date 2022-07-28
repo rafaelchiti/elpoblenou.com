@@ -5,7 +5,16 @@ import { PHOTOS } from "src/constants/photos";
 
 export const HomePage = () => {
   return (
-    <div className="m-auto mt-16">
+    <div className="m-auto">
+      <h1 className="px-8 mt-8 text-center text-4xl font-light italic ">
+        El Poblenou
+      </h1>
+      <h2 className="text-center text-xl font-light text-gray-10">
+        A lil Wednesday project.
+      </h2>
+
+      <div className="mt-8" />
+
       <div className="flex flex-wrap items-end">
         {PHOTOS.map((photo, index) => {
           return (

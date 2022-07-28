@@ -9,10 +9,6 @@ const Home: NextPage = () => {
       <Head>
         <title>El Poblenou</title>
       </Head>
-      <div className="p-8 text-center text-4xl font-light italic">
-        El Poblenou
-      </div>
-
       <HomePage />
     </>
   );

@@ -15,7 +15,7 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
   }
 
   return (
-    <div className="h-full p-8">
+    <div className="h-full px-8 py-5">
       <div className="h-full flex flex-col items-stretch   md:flex-row">
         {/*
          * Aside
@@ -33,9 +33,10 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
 
           <div className="mt-4" />
 
-          <div className="ring-1 ring-gray-7 p-3 rounded-md">
-            <Avatar photo={photo} />
-          </div>
+          <CameraInfoBox photo={photo} />
+          <div className="mt-3" />
+
+          <Avatar photo={photo} />
         </aside>
 
         {/*
@@ -58,17 +59,60 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
   );
 };
 
+//
+// Camera info
+//
+const CameraInfoBox = ({ photo }: { photo: PhotoType }) => {
+  const hasMainInfo = photo.camera || photo.lens;
+  const hasSecondaryInfo = photo.iso || photo.shutterSpeed || photo.fStop;
+
+  if (!hasMainInfo && !hasSecondaryInfo) return null;
+
+  return (
+    <div className="ring-gray-7 rounded-md">
+      <div className="p-2 rounded-sm text-gray-9 text-sm font-normal bg-gray-4 ">
+        {/*  */}
+        {hasMainInfo ? (
+          <div className="bg-gray-1 p-2">
+            <span className="block">{photo.camera}</span>
+            <span>{photo.lens}</span>
+          </div>
+        ) : null}
+
+        {hasSecondaryInfo ? (
+          <div className="p-2 flex items-center gap-3">
+            {photo.iso ? <span>{photo.iso}</span> : null}
+
+            {photo.iso && (photo.fStop || photo.shutterSpeed) ? (
+              <div className="mx-1 self-stretch ring-1 ring-gray-7" />
+            ) : null}
+
+            {photo.fStop ? <span>{photo.fStop}</span> : null}
+
+            {photo.fStop && photo.shutterSpeed ? (
+              <div className="mx-1 self-stretch ring-1 ring-gray-7" />
+            ) : null}
+
+            <span>{photo.shutterSpeed}</span>
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+};
+
+//
+// Avatar
+//
 const Avatar = ({ photo }: { photo: PhotoType }) => {
   return (
     <div className="flex items-center">
-      <div>
-        {/* <img
+      {/* <img
             className="inline-block h-9 w-9 rounded-full"
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           /> */}
-        <AvatarPlaceholder />
-      </div>
+      <AvatarPlaceholder />
 
       <div className="ml-3">
         <NextLink href={`/by/${photo.author.replace(" ", "-").toLowerCase()}`}>
