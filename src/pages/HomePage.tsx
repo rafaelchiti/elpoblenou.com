@@ -11,7 +11,7 @@ export const HomePage = () => {
         El Poblenou
       </h1>
       <h2 className="text-center text-xl font-light text-gray-10">
-        A lil Wednesday project.
+        A Wine Wednesdays project.
       </h2>
 
       <div className="mt-8" />
