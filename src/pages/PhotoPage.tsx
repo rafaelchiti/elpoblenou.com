@@ -17,12 +17,12 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
   }
 
   return (
-    <div className="h-full px-8 py-5">
+    <div className="h-full md:px-8 py-5">
       <div className="h-full flex flex-col items-stretch   md:flex-row">
         {/*
          * Aside
          */}
-        <aside className="order-2 flex flex-col p-2   md:order-1 md:w-96">
+        <aside className="order-2 flex md:mr-2 flex-col p-2   md:order-1 md:w-96">
           <button
             onClick={() => router.push("/")}
             type="button"
