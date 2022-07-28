@@ -7,12 +7,20 @@ import { PHOTOS, PhotoType } from "src/constants/photos";
 export const HomePage = () => {
   return (
     <div className="m-auto">
-      <h1 className="px-8 mt-8 text-center text-4xl font-light italic ">
-        El Poblenou
-      </h1>
-      <h2 className="text-center text-xl font-light text-gray-10">
-        A Wine Wednesdays project.
-      </h2>
+      <div className="px-8 pt-6">
+        <h1 className="text-4xl font-light italic ">El Poblenou</h1>
+        <div className="mt-2" />
+        <h2 className="font-light text-gray-10 max-w-2xl text-justify md:text-left">
+          El Poblenou, a vibrant rapidly changing district of Barcelona. A
+          former industrial neighbourhood, once full of factories and warehouses
+          in the past 5 years transforms to something wonderfully undefinable, a
+          place which happily hosts art ateliers, tech. companies, best coffee
+          shops of the city, abandoned buildings, modern architecture,
+          scrap-yards and music studios. Through this blog we want to explore
+          and express our fascination with our barrio [hood] and capture its
+          evolution.
+        </h2>
+      </div>
 
       <div className="mt-8" />
 
