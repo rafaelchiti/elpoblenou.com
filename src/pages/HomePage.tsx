@@ -10,6 +10,7 @@ export const HomePage = () => {
       <div className="px-8 pt-6">
         <h1 className="text-4xl font-light italic ">El Poblenou</h1>
         <div className="mt-2" />
+
         <h2 className="font-light text-gray-10 max-w-2xl text-justify md:text-left">
           El Poblenou, a vibrant rapidly changing district of Barcelona. A
           former industrial neighbourhood, once full of factories and warehouses
