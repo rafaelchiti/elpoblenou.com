@@ -37,7 +37,7 @@ export const CollectionPage = ({
       <div className="mt-10" />
 
       <div className="flex flex-wrap items-end">
-        {PHOTOS.map((photo, index) => {
+        {photos.map((photo, index) => {
           return (
             <div
               key={index}

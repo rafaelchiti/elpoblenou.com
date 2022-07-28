@@ -1,7 +1,8 @@
+import * as React from "react";
 import { format } from "date-fns";
 import NextImage from "next/image";
 import NextLink from "next/link";
-import { PHOTOS } from "src/constants/photos";
+import { PHOTOS, PhotoType } from "src/constants/photos";
 
 export const HomePage = () => {
   return (
@@ -58,3 +59,24 @@ export const HomePage = () => {
     </div>
   );
 };
+
+function shuffle(array: PhotoType[]) {
+  const newArray = [...array];
+  let currentIndex = newArray.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [newArray[currentIndex], newArray[randomIndex]] = [
+      newArray[randomIndex],
+      newArray[currentIndex],
+    ];
+  }
+
+  return newArray;
+}
