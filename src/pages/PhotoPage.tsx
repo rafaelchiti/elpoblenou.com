@@ -74,14 +74,14 @@ const CameraInfoBox = ({ photo }: { photo: PhotoType }) => {
         {/*  */}
         {hasMainInfo ? (
           <div className="bg-gray-1 p-2">
-            <span className="block">{photo.camera}</span>
-            <span>{photo.lens}</span>
+            <span className="block text-md mb-1">{photo.camera}</span>
+            <span className="text-xs">{photo.lens}</span>
           </div>
         ) : null}
 
         {hasSecondaryInfo ? (
           <div className="p-2 flex items-center gap-3">
-            {photo.iso ? <span>{photo.iso}</span> : null}
+            {photo.iso ? <span>ISO {photo.iso}</span> : null}
 
             {photo.iso && (photo.fStop || photo.shutterSpeed) ? (
               <div className="mx-1 self-stretch ring-1 ring-gray-7" />
