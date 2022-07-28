@@ -10,8 +10,10 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
   const photo = PHOTOS.find((photo) => photo.id === photoId);
   const router = useRouter();
 
-  if (!photo) {
+  if (!photo && router.isReady) {
     return <div>Ops we couldn't find that photo, maybe the link is wrong?</div>;
+  } else if (!photo) {
+    return null;
   }
 
   return (
