@@ -22,7 +22,7 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
          */}
         <aside className="order-2 flex flex-col p-2   md:order-1 md:w-96">
           <button
-            onClick={() => router.back()}
+            onClick={() => router.push("/")}
             type="button"
             className="flex justify-center items-center p-1.5 w-7 h-7 rounded-md text-gray-10
               hover:text-white hover:bg-violet-5 hover:text-violet-10 cursor-default
