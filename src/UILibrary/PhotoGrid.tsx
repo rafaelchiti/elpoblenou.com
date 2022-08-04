@@ -30,6 +30,7 @@ export const PhotoGridItem = ({ photo }: { photo: PhotoType }) => {
           <div
             // style={{ aspectRatio: `${photo.aspectRatio}` }}
             className="relative 
+                    bg-gray-6
                     w-full h-full"
           >
             <NextImage
