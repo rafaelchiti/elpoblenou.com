@@ -25,23 +25,25 @@ export const HomePage = () => {
 
       <div className="mt-8" />
 
-      <div className="flex flex-wrap items-end">
+      <div className="sm:flex sm:flex-wrap">
         {PHOTOS.map((photo, index) => {
           return (
             <div
               key={index}
-              className="py-4 px-7 pb-16 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-1/5mb-9"
+              // className="py-4 px-7 pb-16 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-1/5mb-9"
+              className="px-2 pb-16  w-full h-[75vh]  sm:h-[50vh] sm:w-1/2  md:w-1/3 md:h-[50vh] lg:w-1/4 xl:w-1/4 2xl:w-1/5"
             >
               <NextLink href={`/photos/${photo.id}`}>
                 <a>
                   <div
                     key={index}
-                    style={{ aspectRatio: `${photo.aspectRatio}` }}
-                    className="relative bg-gray-6"
+                    // style={{ aspectRatio: `${photo.aspectRatio}` }}
+                    className="relative bg-gray-6 w-full h-full"
                   >
                     <NextImage
                       src={photo.url}
                       layout="fill"
+                      objectFit="cover"
                       alt={`Photo from ${photo.author}`}
                     />
                   </div>
