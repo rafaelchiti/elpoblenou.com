@@ -17,7 +17,7 @@ export const PhotoGridItem = ({ photo }: { photo: PhotoType }) => {
   return (
     <div
       className="
-                w-full h-[75vh]  px-2 pb-16 mb-4
+                w-full h-auto  px-2 pb-16 mb-4 min-h-[300px]
                 sm:h-[40vh] sm:w-1/2  sm:px-3
                 md:w-1/2 md:h-[45vh] md:px-4 
                 lg:w-1/3 lg:px-6 
@@ -28,7 +28,7 @@ export const PhotoGridItem = ({ photo }: { photo: PhotoType }) => {
       <NextLink href={`/photos/${photo.id}`}>
         <a>
           <div
-            // style={{ aspectRatio: `${photo.aspectRatio}` }}
+            style={{ aspectRatio: `${photo.aspectRatio}` }}
             className="relative 
                     bg-gray-6
                     w-full h-full"
