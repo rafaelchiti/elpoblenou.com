@@ -18,6 +18,7 @@ export type PhotoType = {
 
 const AUTHOR_RAFA = "Rafael Chiti";
 const AUTHOR_MASHA = "Masha";
+const AUTHOR_ARTURO = "Arturo";
 
 const CAMERAS = {
   fujiXE4: "Fuji X-E4",
@@ -248,6 +249,126 @@ const MASHA_PHOTOS_JUL_27_2022 = [
   },
 ];
 
+//
+// -------------------------------------------------
+// Arturo
+// -------------------------------------------------
+//
+const ARTURO_PHOTOS_JUL_27_2022 = [
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/1.jpg",
+    aspectRatio: 921 / 614,
+    date: new Date("2022-07-27"),
+    id: "gvjL2VKtQF",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/2.jpg",
+    aspectRatio: 921 / 593,
+    date: new Date("2022-07-27"),
+    id: "2l4hyOHyjF",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/3.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "bRb447toG5",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/4.jpg",
+    aspectRatio: 921 / 633,
+    date: new Date("2022-07-27"),
+    id: "aZ7if55kyk",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/5.jpg",
+    aspectRatio: 921 / 613,
+    date: new Date("2022-07-27"),
+    id: "Nu66stOYqi",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/6.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "gRX8i1OGdq",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/7.jpg",
+    aspectRatio: 921 / 600,
+    date: new Date("2022-07-27"),
+    id: "M01dBZg0KY",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/8.jpg",
+    aspectRatio: 921 / 614,
+    date: new Date("2022-07-27"),
+    id: "J7felwEmVt",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/9.jpg",
+    aspectRatio: 921 / 614,
+    date: new Date("2022-07-27"),
+    id: "c3257pb9JO",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/10.jpg",
+    aspectRatio: 921 / 592,
+    date: new Date("2022-07-27"),
+    id: "oLd213N5Ct",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/11.jpg",
+    aspectRatio: 921 / 614,
+    date: new Date("2022-07-27"),
+    id: "1E11CypoOL",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/12.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "u54ryWauY",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/13.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "uF8jryWauY",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/14.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "uF12ryWauY",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/15.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "uF32ryWauY",
+    author: AUTHOR_ARTURO,
+  },
+  {
+    url: "https://d31ycvomo5jvoe.cloudfront.net/el-poblenou-site/artur/16.jpg",
+    aspectRatio: 509 / 764,
+    date: new Date("2022-07-27"),
+    id: "uFK24yWauY",
+    author: AUTHOR_ARTURO,
+  },
+];
+
 export const PHOTOS = [
   ...RAFA_PHOTOS_WED_JUL_28_2022.map((p) => ({
     ...p,
@@ -258,6 +379,11 @@ export const PHOTOS = [
     ...p,
     camera: CAMERAS.fujiXT10,
     lens: LENSES.fujiXf35,
+  })),
+  ...ARTURO_PHOTOS_JUL_27_2022.map((p) => ({
+    ...p,
+    // camera: CAMERAS.fujiXT10,
+    // lens: LENSES.fujiXf35,
   })),
 ];
 
