@@ -13,12 +13,14 @@
     "@radix-ui/react-icons": "^1.1.1",
     "@splitbee/web": "^0.3.0",
     "date-fns": "^2.29.1",
+    "knuth-shuffle-seeded": "^1.0.6",
     "lodash": "^4.17.21",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/knuth-shuffle-seeded": "^1.0.0",
     "@types/lodash": "^4.14.182",
     "@types/node": "18.6.1",
     "@types/react": "18.0.15",

@@ -1,4 +1,4 @@
-import { groupBy, pickBy } from "lodash";
+import { groupBy, pickBy, shuffle } from "lodash";
 
 export type PhotoType = {
   id: string;
@@ -371,7 +371,7 @@ const ARTURO_PHOTOS_JUL_27_2022 = [
   },
 ];
 
-export const PHOTOS = [
+const UNSHUFFLED_PHOTOS = [
   ...RAFA_PHOTOS_WED_JUL_28_2022.map((p) => ({
     ...p,
     lens: LENSES.fujiXf23,
@@ -388,6 +388,10 @@ export const PHOTOS = [
     lens: LENSES.summicronC240,
   })),
 ];
+
+import shuffleSeeded from "knuth-shuffle-seeded";
+
+export const PHOTOS = shuffleSeeded(UNSHUFFLED_PHOTOS, 3);
 
 //
 //
