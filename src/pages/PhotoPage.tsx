@@ -53,6 +53,7 @@ export const PhotoPage = ({ photoId }: { photoId?: string }) => {
               src={photo.url}
               layout="fill"
               alt={`Image from ${photo?.author}`}
+              objectFit="contain"
             />
           </div>
         </main>
