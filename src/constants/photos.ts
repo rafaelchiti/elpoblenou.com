@@ -23,10 +23,12 @@ const AUTHOR_ARTURO = "Arturo";
 const CAMERAS = {
   fujiXE4: "Fuji X-E4",
   fujiXT10: "Fuji XT10",
+  leicaCL: "Leica CL",
 };
 const LENSES = {
   fujiXf23: "FUJINON  XF23mmF2 R WR",
   fujiXf35: "FUJINON  XF35mmF2 R WR",
+  summicronC240: "Summicron-C 1:2/40",
 };
 
 //
@@ -382,8 +384,8 @@ export const PHOTOS = [
   })),
   ...ARTURO_PHOTOS_JUL_27_2022.map((p) => ({
     ...p,
-    // camera: CAMERAS.fujiXT10,
-    // lens: LENSES.fujiXf35,
+    camera: CAMERAS.leicaCL,
+    lens: LENSES.summicronC240,
   })),
 ];
 
