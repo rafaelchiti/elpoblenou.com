@@ -4,6 +4,7 @@ import NextLink from "next/link";
 import { PhotoType } from "src/constants/photos";
 import { format } from "date-fns";
 import { CalendarIcon } from "@radix-ui/react-icons";
+import { useMediaQuery } from "react-responsive";
 
 export const PhotoGrid = ({
   children,
@@ -14,6 +15,13 @@ export const PhotoGrid = ({
 };
 
 export const PhotoGridItem = ({ photo }: { photo: PhotoType }) => {
+  // On a small device up to a small tablet, show images that calculate their width/quality based on that max size 768px
+  // But when on a big device, never take more than 1/4 of the screen as the max width for calculating the image.
+  // Read more here: https://nextjs.org/docs/api-reference/next/image#sizes
+  const sizes = useMediaQuery({ query: "(max-width: 768px)" })
+    ? "100vw"
+    : "20vw";
+
   return (
     <div
       className="
@@ -36,6 +44,7 @@ export const PhotoGridItem = ({ photo }: { photo: PhotoType }) => {
             <NextImage
               src={photo.url}
               layout="fill"
+              sizes={sizes}
               objectFit="cover"
               alt={`Photo from ${photo.author}`}
             />
