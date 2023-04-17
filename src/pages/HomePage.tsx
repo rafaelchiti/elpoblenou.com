@@ -7,8 +7,8 @@ export const HomePage = ({ photos }: { photos: PhotoType[] }) => {
     <div className="m-auto pb-8 md:px-10">
       <div className="px-8 pt-6">
         <h1 className="text-4xl font-light italic ">El Poblenou</h1>
-        <div className="mt-2 text-sm rounded-sm bg-gray-3 inline-block px-3 py-2">
-          <h3 className="text-gray-11 p-0 m-0">design inspiration from</h3>
+        <div className="mt-2 text-sm rounded-sm bg-gray-3 inline-block px-2 py-2">
+          <h3 className="text-gray-11 p-0 m-0">design inspired by</h3>
           <a
             className="m-0 p-0 underline"
             target="_blank"
